@@ -4,7 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import backend.com.example.repositorios.CasoRepository;
+import backend.com.example.repositorios.UsuarioRepository;
 import backend.com.example.entidades.Usuario;
 
 import java.util.List;
