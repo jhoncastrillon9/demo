@@ -18,6 +18,8 @@ public class Usuario {
 
     private String contraseña;
 
+    private boolean isAdmin;
+
     // Otros atributos y relaciones
 
     @OneToMany(mappedBy = "usuario")
