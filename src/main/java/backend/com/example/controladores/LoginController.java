@@ -5,7 +5,6 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import backend.com.example.repositorios.UsuarioRepository;
 import backend.com.example.entidades.Usuario;
-import java.util.List;
 
 @RestController
 @RequestMapping("/login")

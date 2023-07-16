@@ -39,12 +39,13 @@ public class UsuarioController {
         return ResponseEntity.status(HttpStatus.CREATED).body(nuevoUsuario);
     }
 
-    @PutMapping("/{id}")
-    public ResponseEntity<Usuario> actualizarUsuario(@PathVariable Long id, @RequestBody Usuario usuarioActualizado) {
-        Usuario usuarioExistente = usuarioRepository.findById(id).orElse(null);
+    @PutMapping()
+    public ResponseEntity<Usuario> actualizarUsuario(@RequestBody Usuario usuarioActualizado) {
+        Usuario usuarioExistente = usuarioRepository.findById(usuarioActualizado.getId()).orElse(null);
         if (usuarioExistente != null) {
             usuarioExistente.setNombre(usuarioActualizado.getNombre());
             usuarioExistente.setContraseña(usuarioActualizado.getContraseña());
+            usuarioExistente.setIsAdmin(usuarioActualizado.getIsAdmin());
             Usuario usuarioFinalActualizado = usuarioRepository.save(usuarioExistente);
             return ResponseEntity.ok(usuarioFinalActualizado);
         } else {

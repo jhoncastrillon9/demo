@@ -18,10 +18,10 @@ public class Usuario {
 
     private String contraseña;
 
-    private boolean isAdmin;
+    private Boolean isAdmin;
 
     // Otros atributos y relaciones
 
-    @OneToMany(mappedBy = "usuario")
+    @OneToMany(mappedBy = "usuarioId")
     private List<Caso> casos;
 }

@@ -52,7 +52,7 @@ public class CasoController {
             casoExistente.setLongitud(casoActualizado.getLongitud());
             casoExistente.setAltitud(casoActualizado.getAltitud());
             casoExistente.setDescripcion(casoActualizado.getDescripcion());
-            casoExistente.setUsuario(casoActualizado.getUsuario());
+            casoExistente.setUsuarioId(casoActualizado.getUsuarioId());
             Caso casofinalActualizado = casoRepository.save(casoExistente);
             return ResponseEntity.ok(casofinalActualizado);
         } else {

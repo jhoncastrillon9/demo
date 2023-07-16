@@ -26,6 +26,5 @@ public class Caso {
 
     private String descripcion;
 
-    @ManyToOne
-    private Usuario usuario;
+    private Long usuarioId;
 }
